@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.asidenav{
+    height: 700px;
+}
+
+.main{
+    background-color: #eff3f9;
+}
+
+.topnav{
+    background-color: white;
+    height: 70px;
+    position: sticky;
+    top: 20px;
+}
+
+.searchinput{
+    /* width: 400px; */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f4f6fc;
+}
+
+.navlist{
+    color: #000000;
+}
+
+.navlist:hover{
+    background-color: #0f79f3;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Calender style */
+.wrapper{
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  }
+  .wrapper header{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+  }
+  header .icons{
+    display: flex;
+  }
+  header .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+  }
+  .icons span:last-child{
+    margin-right: -10px;
+  }
+  header .icons span:hover{
+    background: #f2f2f2;
+  }
+  header .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+  }
+  .calendar{
+    padding: 20px;
+  }
+  .calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+  }
+  .calendar .days{
+    margin-bottom: 20px;
+  }
+  .calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+  }
+  .calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+  }
+  .calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+  }
+  .days li.inactive{
+    color: #aaa;
+  }
+  .days li.active{
+    color: #fff;
+  }
+  .days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .days li.active::before{
+    background: #9B59B6;
+  }
+  .days li:not(.active):hover::before{
+    background: #f2f2f2;
+  }  
+
+@media(min-width:768px){
+    .wrapper{
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+@media(min-width:1024px){
+
+    .topnav{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .searchinput{
+        width: 400px;
+    }
+
+    .wrapper{
+        width: 1000px;
+        margin: 0 auto;
+        height: 450px;
+    }
+    
+}
